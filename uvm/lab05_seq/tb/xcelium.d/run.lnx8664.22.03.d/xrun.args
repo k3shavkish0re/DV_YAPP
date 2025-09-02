@@ -1,0 +1,10 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-f
+run.f
++UVM_VERBOSITY=UVM_FULL
+-gui
+-access
++rwc

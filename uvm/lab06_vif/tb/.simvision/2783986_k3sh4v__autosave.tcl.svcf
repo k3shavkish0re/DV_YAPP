@@ -1,0 +1,90 @@
+
+#
+# Preferences
+#
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set plugin-enable-groupscope 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1920x1009+0+23}] != ""} {
+    window geometry "Waveform 1" 1920x1009+0+23
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 341 \
+    -units ps \
+    -valuewidth 245
+waveform baseline set -time 0
+
+set id [waveform add -signals  {
+	{simulator::hw_top.dut.data_0[7:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::hw_top.dut.data_1[7:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::hw_top.dut.data_2[7:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::hw_top.in0.in_data[7:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::hw_top.dut.addr[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::hw_top.in0.collect_packet.addr[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::hw_top.in0.collect_packet.length[5:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::hw_top.in0.send_to_dut.addr[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::hw_top.in0.send_to_dut.length[5:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::hw_top.clock
+	} ]
+
+waveform xview limits 0 905000ps
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x250+0+0
+
+#
+# Layout selection
+#

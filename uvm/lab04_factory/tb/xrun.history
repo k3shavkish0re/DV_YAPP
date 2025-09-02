@@ -1,0 +1,21 @@
+s1(18Aug2025:17:48:02):  xrun -f run.f +UVM_TESTNAME=base_test +UVM_VERBOSITY=UVM_HIGH 
+s2(18Aug2025:17:49:05):  xrun -f run.f +UVM_TESTNAME=base_test +UVM_VERBOSITY=UVM_LOW 
+s3(30Aug2025:17:23:07):  xrun -f run.f 
+s4(30Aug2025:21:17:14):  xrun -f run.f 
+s5(30Aug2025:21:17:29):  xrun -f run.f 
+s6(30Aug2025:21:21:10):  xrun -f run.f 
+s7(30Aug2025:21:22:28):  xrun -f run.f 
+s8(30Aug2025:21:26:36):  xrun -f run.f 
+s9(30Aug2025:21:27:11):  xrun -f run.f 
+s10(30Aug2025:21:33:50):  xrun -f run.f +SVSEED=random 
+s11(30Aug2025:21:35:55):  xrun -f run.f +SVSEED=random 
+s12(30Aug2025:22:22:18):  xrun -f run.f 
+s13(30Aug2025:22:36:00):  xrun -f run.f +UVM_TESTNAME=short_packet_test 
+s14(30Aug2025:22:37:16):  xrun -f run.f +UVM_TESTNAME=short_packet_test 
+s15(30Aug2025:22:38:16):  xrun -f run.f +UVM_TESTNAME=short_packet_test 
+s16(30Aug2025:22:38:55):  xrun -f run.f +UVM_TESTNAME=short_packet_test 
+s17(30Aug2025:22:44:39):  xrun -f run.f +UVM_TESTNAME=set_config_test 
+s18(30Aug2025:22:45:28):  xrun -f run.f +UVM_TESTNAME=set_config_test 
+s19(30Aug2025:22:49:41):  xrun -f run.f +UVM_TESTNAME=set_config_test 
+s20(31Aug2025:12:13:00):  xrun -f run.f 
+s21(31Aug2025:12:18:23):  xrun -f run.f +UVM_VERBOSITY=UVM_HIGH 

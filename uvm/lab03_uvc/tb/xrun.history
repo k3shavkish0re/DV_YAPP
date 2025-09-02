@@ -1,0 +1,11 @@
+s1(18Aug2025:17:48:02):  xrun -f run.f +UVM_TESTNAME=base_test +UVM_VERBOSITY=UVM_HIGH 
+s2(18Aug2025:17:49:05):  xrun -f run.f +UVM_TESTNAME=base_test +UVM_VERBOSITY=UVM_LOW 
+s3(30Aug2025:17:23:07):  xrun -f run.f 
+s4(30Aug2025:21:17:14):  xrun -f run.f 
+s5(30Aug2025:21:17:29):  xrun -f run.f 
+s6(30Aug2025:21:21:10):  xrun -f run.f 
+s7(30Aug2025:21:22:28):  xrun -f run.f 
+s8(30Aug2025:21:26:36):  xrun -f run.f 
+s9(30Aug2025:21:27:11):  xrun -f run.f 
+s10(30Aug2025:21:33:50):  xrun -f run.f +SVSEED=random 
+s11(30Aug2025:21:35:55):  xrun -f run.f +SVSEED=random 

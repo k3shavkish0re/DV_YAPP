@@ -1,0 +1,36 @@
+/*-----------------------------------------------------------------
+File name     : tb_top.sv
+Description   : lab06_data tb_top module template file
+Notes         : From the Cadence "SystemVerilog Advanced Verification with UVM" training
+-------------------------------------------------------------------
+Copyright Cadence Design Systems (c)2015
+-----------------------------------------------------------------*/
+
+module tb_top;
+// import the UVM library
+import uvm_pkg::*;
+// include the UVM macros
+`include "uvm_macros.svh"
+
+
+// import the yapp package
+import yapp_pkg::*;
+
+// import the router_tb
+`include "router_tb.sv"
+`include "router_test_lib.sv"
+
+
+initial begin
+yapp_vif_config::set(null, "uvm_test_top.tb.env.*", "vif", hw_top.in0);
+run_test("yapp_012_test");
+uvm_root::get().print_topology();
+end
+
+initial begin
+  $monitor("DUT_INFO: time=%0t, hw_in_data=%h", $time, hw_top.in0.in_data);
+end
+
+
+// experiment with the copy, clone and compare UVM method
+endmodule : tb_top

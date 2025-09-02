@@ -1,0 +1,32 @@
+--------------------------------------------------------
+Name                    Type                 Size  Value
+--------------------------------------------------------
+uvm_test_top            base_test            -     @2854
+  tb                    router_tb            -     @2944
+    car_env             clock_and_reset_env  -     @3135
+      recording_detail  integral             32    'd1
+    chan0               channel_env          -     @2976
+      channel_id        integral             32    'h0
+      checks_enable     integral             1     'h1
+      coverage_enable   integral             1     'h1
+      recording_detail  integral             32    'd1
+    chan1               channel_env          -     @3045
+      channel_id        integral             32    'h0
+      checks_enable     integral             1     'h1
+      coverage_enable   integral             1     'h1
+      recording_detail  integral             32    'd1
+    chan2               channel_env          -     @3075
+      channel_id        integral             32    'h0
+      checks_enable     integral             1     'h1
+      coverage_enable   integral             1     'h1
+      recording_detail  integral             32    'd1
+    env                 yapp_env             -     @3016
+      recording_detail  integral             32    'd1
+    h_env               hbus_env             -     @3105
+      num_masters       integral             32    'h0
+      num_slaves        integral             32    'h0
+      checks_enable     integral             1     'h1
+      coverage_enable   integral             1     'h1
+      recording_detail  integral             32    'd1
+    recording_detail    integral             32    'd1
+--------------------------------------------------------
