@@ -4,3 +4,6 @@
 //
 -f
 run.f
+-gui
+-coverage
+U

@@ -8,14 +8,14 @@
 /opt/coe/cadence/XCELIUM/tools/methodology/UVM/CDNS-1.1d/sv
 -sv_lib
 /opt/coe/cadence/XCELIUM/tools/methodology/UVM/CDNS-1.1d/sv/lib/64bit/libuvmpli.so
+-gui
 -MESSAGES
--RUN
 -SV_LIB
 /opt/coe/cadence/XCELIUM/tools/methodology/UVM/CDNS-1.1d/sv/lib/64bit/libuvmdpi.so
 +EMGRLOG
 xrun.log
 -XLSTIME
-1756772847
+1757451568
 -XLKEEP
 -XLMODE
 ./xcelium.d/run.lnx8664.22.03.d
